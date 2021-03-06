@@ -55,6 +55,15 @@ body {
 .bg_container{
   background-color: #EBEDEF;
 }
+.hoverBtnPrinc{
+    border-color:#2865A2;
+    background-color: white;
+    color:#2865A2;
+}
+.hoverBtnPrinc:hover{
+    background-color: #2865A2!important;
+    color:white;
+}
 // navbar
 
 .cachee{
