@@ -1,0 +1,80 @@
+action:
+    delete: Delete
+    update: Update
+agent:
+    create:
+        flash:
+            success: 'Agent created (%identifier%).'
+        h1: 'Create - Agent'
+        h2: 'Create form'
+        title: 'Create - Agent'
+    field:
+        description: Description
+        firstname: Firstname
+        lastname: Lastname
+        phone1: Phone1
+        photo: photo
+    label:
+        confirmation_token: 'Confirmation Token'
+        created_at: 'Created At'
+        description: Description
+        email: Email
+        enabled: Enabled
+        firstname: Firstname
+        last_login_at: 'Last Login At'
+        lastname: Lastname
+        password: Password
+        phone1: Phone1
+        roles: Roles
+        updated_at: 'Updated At'
+    read:
+        h1: 'Details - Agent'
+        h2: Details
+        title: 'Details - Agent'
+    search:
+        h1: 'Search - Agent'
+        h2: Search
+        title: 'Search - Agent'
+    update:
+        flash:
+            success: 'Agent updated.'
+        h1: 'Update - Agent'
+        h2: 'Update form'
+        title: 'Update - Agent'
+button:
+    back: Back
+    create: Add
+    filter: Filter
+    next: Next
+    previous: Previous
+    read_title: Details
+    submit: Submit
+    update_title: Update
+label:
+    filter_number_by_page: 'Number by page'
+    filter_search: Search
+nav:
+    account: Account
+    account_back: Back-office
+    account_login: Login
+    account_logout: Logout
+    account_profile: 'My profile'
+    account_register: Registration
+    account_reset_email: 'Reset email'
+    account_reset_password: 'Reset password'
+    home: Home
+    lang: Language
+    lang_en: English
+    lang_fr: French
+'no': 'No'
+search:
+    action_th: Action(s)
+    no_data_found: 'No data found'
+user_address:
+    label:
+        city: City
+        complement: Complement
+        other: Other
+        street: Street
+        zip_code: 'Zip Code'
+'yes': 'Yes'

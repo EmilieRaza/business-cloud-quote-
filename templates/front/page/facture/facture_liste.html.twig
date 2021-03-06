@@ -1,0 +1,198 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Liste des factures {% endblock %}
+
+{% block content %}
+
+<div class="container mb-4">
+
+  <div class="row">
+    <div class="col-md-8">
+        <span class="h3">Liste des factures de mes clients</span> 
+        <button type="button" class="btn bg_bouton_principal text-light ml-3">
+        <a href="{{ path('agent_facture_create') }}" class=" text-light">Créer une facture</a> 
+            <i class="fas fa-plus text-light " ></i></button>
+            
+    </div>
+    <div class="col-md-4 ">
+        <form class="form-inline float-right">
+            <input class="form-control" type="search" placeholder="Rechercher une facture" aria-label="Rechercher">
+            <button class="btn my-2 my-sm-0 text-light bg_bouton_principal" type="submit"><i class="fas fa-search"></i></button>
+          </form>  
+    </div>
+  </div>  
+</div>
+
+<div class="container">
+
+    <table class="table  table-striped table-hover bg-light">
+        <thead>
+          <tr>
+            <th>N° de facture</th>
+            <th>Client</th>
+            <th>Date d'échéance</th>
+            <th>Prix total TTC € </th>
+            <th>Prix total HT €</th>
+            <th>Statut</th>
+            <th class="float-right">Action <i class="fas fa-ellipsis-v "></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BILL6_0237</td>
+            <td>Elodie lows</td>
+            <td>23/11/2020</td>
+            <td>3 452,00</td>
+            <td>2 876,67</td>
+            <td><h6><span class="badge bg_couleur_vert">Payée</span></h6></td>
+            <td>
+                <div class="float-right">
+                      <button type="button" class="btn bg_bouton_principal"><a href="#"><i class="fas fa-file-download text-light"></i></a></button>
+
+                    <button type="button" class="btn bg_bouton_principal"><a href="{{ path('agent_facture_read') }}"><i class="fas fa-file-alt text-light"></i></a></button>
+           
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>BILL6_0237</td>
+            <td> 
+               
+              Dauris Cedric <i class="fas fa-certificate text-warning"></i>
+            </td>
+            <td>23/11/2020</td>
+            <td>3 452,00</td>
+            <td>2 876,67</td>
+            <td><h6><span class="badge bg_couleur_vert">Payée</span></h6></td>
+            <td>
+                <div class="float-right">
+                      <button type="button" class="btn bg_bouton_principal"><a href="#"><i class="fas fa-file-download text-light"></i></a></button>
+
+                    <button type="button" class="btn bg_bouton_principal"><a href="{{ path('agent_facture_read') }}"><i class="fas fa-file-alt text-light"></i></a></button>
+           
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>BILL6_02323</td>
+            <td>Martin Loupier</td>
+            <td>23/11/2020</td>
+            <td>3 452,00</td>
+            <td>2 876,67</td>
+            <td><h6><span class="badge bg_couleur_vert">Payée</span></h6></td>
+            <td>
+                <div class="float-right">
+                      <button type="button" class="btn bg_bouton_principal"><a href="#"><i class="fas fa-file-download text-light"></i></a></button>
+
+                    <button type="button" class="btn bg_bouton_principal"><a href="{{ path('agent_facture_read') }}"><i class="fas fa-file-alt text-light"></i></a></button>
+           
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>BILL6_0237</td>
+            <td>Elodie Ramos <i class="fas fa-certificate text-warning"></i></td>
+            <td>23/11/2020</td>
+            <td>3 452,00</td>
+            <td>2 876,67</td>
+            <td><h6><span class="badge bg_couleur_vert">Payée</span></h6></td>
+            <td>
+                <div class="float-right">
+                      <button type="button" class="btn bg_bouton_principal"><a href="#"><i class="fas fa-file-download text-light"></i></a></button>
+
+                    <button type="button" class="btn bg_bouton_principal"><a href="{{ path('agent_facture_read') }}"><i class="fas fa-file-alt text-light"></i></a></button>
+           
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>BILL6_0237</td>
+            <td>Maria Laure</td>
+            <td>23/11/2020</td>
+            <td>3 452,00</td>
+            <td>2 876,67</td>
+            <td><h6><span class="badge bg_couleur_vert">Payée</span></h6></td>
+            <td>
+                <div class="float-right">
+                      <button type="button" class="btn bg_bouton_principal"><a href="#"><i class="fas fa-file-download text-light"></i></a></button>
+
+                    <button type="button" class="btn bg_bouton_principal"><a href="{{ path('agent_facture_read') }}"><i class="fas fa-file-alt text-light"></i></a></button>
+           
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>BILL6_0237</td>
+            <td>Damien Domigues</td>
+            <td>23/11/2020</td>
+            <td>3 452,00</td>
+            <td>2 876,67</td>
+            <td><h6><span class="badge bg_couleur_vert">Payée</span></h6></td>
+            <td>
+                <div class="float-right">
+                      <button type="button" class="btn bg_bouton_principal"><a href="#"><i class="fas fa-file-download text-light"></i></a></button>
+
+                    <button type="button" class="btn bg_bouton_principal"><a href="{{ path('agent_facture_read') }}"><i class="fas fa-file-alt text-light"></i></a></button>
+           
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>BILL6_0237</td>
+            <td>Maria Laure</td>
+            <td>23/11/2020</td>
+            <td>3 452,00</td>
+            <td>2 876,67</td>
+            <td><h6><span class="badge bg_couleur_vert">Payée</span></h6></td>
+            <td>
+                <div class="float-right">
+                      <button type="button" class="btn bg_bouton_principal"><a href="#"><i class="fas fa-file-download text-light"></i></a></button>
+
+                    <button type="button" class="btn bg_bouton_principal"><a href="{{ path('agent_facture_read') }}"><i class="fas fa-file-alt text-light"></i></a></button>
+           
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>BILL6_0237</td>
+            <td> 
+               
+              Dauris Cedric <i class="fas fa-certificate text-warning"></i>
+            </td>
+            <td>23/11/2020</td>
+            <td>3 452,00</td>
+            <td>2 876,67</td>
+            <td><h6><span class="badge bg_couleur_vert">Payée</span></h6></td>
+            <td>
+                <div class="float-right">
+                      <button type="button" class="btn bg_bouton_principal"><a href="#"><i class="fas fa-file-download text-light"></i></a></button>
+
+                    <button type="button" class="btn bg_bouton_principal"><a href="{{ path('agent_facture_read') }}"><i class="fas fa-file-alt text-light"></i></a></button>
+           
+                </div>
+            </td>
+          </tr>
+
+        </tbody>
+    </table>
+</div>
+<div class="row justify-content-center mt-3 ">
+    <nav aria-label="" >
+        <ul class="pagination bg_container">
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}

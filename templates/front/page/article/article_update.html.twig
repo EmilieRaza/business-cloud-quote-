@@ -1,0 +1,55 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Mettre à jours un article {% endblock %}
+
+{% block content %}
+
+<div class="container mb-4">
+   <span class="h3"> Mettre à jours un aticle</span> &nbsp; <i class="fas fa-2x  fa-caret-right"></i>  <span class="h4 text-uppercase"> mobilier</span>
+
+    <button type="button" class="btn bg_bouton_principal text-light mb-4  float-right"> <i class="fas fa-reply"></i> <a href="{{ path('agent_article_liste') }}">Retour</a></button>
+</div>
+<div class="container bg_container  pt-1 ">
+    <div class="row m-5">
+      
+        <div class="col-md-12">
+            <div class=" border-bottom">
+                <form >
+                   
+                        <label for="exampleInputEmail1">Libelle de l'article </label>
+                       <div class="form-group">
+                           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email" value="Mobilier">
+                        </div>
+                        <label for="exampleInputEmail1">TVA applicable (%) </label>
+                        <div class="form-group mt-1">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>20 %</option>
+                                <option>10 %</option>
+                                <option>5,5 %</option>
+                                <option>20 %</option>
+                                <option>2,10 %</option>
+                                <option>8,5 %</option>
+                                <option>1,75 %</option>
+                                <option>1,05 %</option>
+                                <option>0,90 %</option>
+                            </select>
+                        </div>
+                          <label for="exampleInputEmail1">Prix unitaire HT €</label>
+                          <div class="form-group">
+                           <input type="text" class="form-control" id="" placeholder=" " value="70">
+                           </div>
+                           <label for="exampleInputEmail1">Description</label>
+                           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                           <br>
+                          
+                </form>
+                
+            </div>
+            
+        </div>
+        <button type="button" class="btn bg_bouton_principal w-100 text-light text-uppercase mb-5 ml-3 mr-3"><a href="{{ path('agent_client_liste') }}">Mettre à jours</a></button>
+    </div>
+   
+</div>
+
+{% endblock %}

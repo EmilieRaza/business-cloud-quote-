@@ -1,0 +1,11 @@
+forms:
+    UserAddress:
+        entity_class: App\Entity\UserAddress
+        skeleton: scrud_bootstrap_4
+        prefix_directory: front
+        fields:
+            - street
+            - complement
+            - city
+            - zipCode
+            - other

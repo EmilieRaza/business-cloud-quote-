@@ -1,0 +1,20 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %}Erreur (404){% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block content %}
+    {% block banner %}
+        <section class="no-banner"></section>
+    {% endblock %}
+    <section class="section-padding">
+        <div class="container text-center">
+            <h1 class="text-center">Oops! La page demandée n'existe pas</h1>
+            <div class="shape"></div>
+            <h2>Le serveur a renvoyé un statut 404.</h2>
+            <p>Désolé pour tout inconvénient causé.</p>
+            <a href="{{ path('home') }}" class="text-light">Retour à la page d'accueil</a>
+        </div>
+    </section>
+{% endblock %}

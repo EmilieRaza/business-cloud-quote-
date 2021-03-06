@@ -1,0 +1,101 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Mettre à jours un prospect {% endblock %}
+
+{% block content %}
+
+<div class="container mb-4">
+   <span class="h3"> Mettre à jours le prospect</span> &nbsp; <i class="fas fa-2x  fa-caret-right"></i>  <span class="h4 text-uppercase"> Danis Pinto</span>
+
+    <button type="button" class="btn bg_bouton_principal text-light mb-4  float-right"> <i class="fas fa-reply"></i> <a href="{{ path('agent_prospect_liste') }}">Retour</a></button>
+</div>
+<div class="container bg_container  pt-1 ">
+    <div class="row m-5">
+        <div class="col-md-6">
+            <div class=" border-bottom">
+                <form>
+                    <div class="form-check mb-1">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Statut (Activé / Désactiver)
+                        </label>
+                      </div>
+                      
+                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option class="bg_bleu1 text-light">Type de client</option>
+                        <option>Particulier</option>
+                        <option class="bg_bleu1 text-light">Entreprise</option>
+                    </select>
+                   <br>
+                   <div class="form-group">
+                    
+                    <input type="text" class="form-control" id="" placeholder="Téléphone" value="01234567890">
+                    </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Activité" value="Enseignement">
+                   </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="SIRET" value="362 521 879 00034">
+                   </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="" placeholder="Numéro CRS" value="RCS Toulon 654 987 321">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Numéro TVA" value="FR37834820078">
+                </div>
+              
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class=" border-bottom">
+                <form >
+                    <label for="exampleInputEmail1">Employé référent</label>
+                    <div class="form-group mt-1">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Alexia Heren</option>
+                            <option>Dominique André</option>
+                            <option>Adrianna Monique</option>
+                            <option>Lucien Chab</option>
+                            <option>Maurice Alexia</option>
+                            <option>Adrien Yourique</option>
+                            <option>Alexis Barbossa</option>
+                            <option>Maunique Alba</option>
+                            <option>Manon Sass</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nom" value="Danis">
+                       </div>
+                       <div class="form-group">
+                           <input type="text" class="form-control" placeholder="Prenom" value="Pinto">
+                          </div>
+                       <div class="form-group">
+                           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email" value="dpinto@gmail.com">
+                          </div>
+                        
+                          <label for="exampleInputEmail1">Adresse</label>
+                          <div class="form-group">
+                           <input type="text" class="form-control" id="" placeholder="N° et nom de rue " value="3 rue de la freine">
+                           </div>
+                           <div class="form-group">
+                           <input type="text" class="form-control" id="" placeholder="06000">
+                           </div>
+                           
+                           <div class="form-group">
+                               <input type="text" class="form-control" id="" placeholder="Nice">
+                           </div>
+                </form>
+                
+            </div>
+            
+        </div>
+        <button type="button" class="btn bg_bouton_principal w-100 text-light text-uppercase mb-5 ml-3 mr-3"><a href="{{ path('agent_client_liste') }}">Mettre à jours</a></button>
+    </div>
+   
+</div>
+
+{% endblock %}

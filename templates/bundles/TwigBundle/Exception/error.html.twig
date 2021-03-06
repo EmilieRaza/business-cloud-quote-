@@ -1,0 +1,23 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %}Une erreur s'est produite: {{ status_text }}{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block content %}
+    {% block banner %}
+         <section class="no-banner"></section>
+    {% endblock %}
+    <section class="section-padding">
+        <div class="container text-center">
+             <h1 class="text-center">Oops! Une erreur s'est produite</h1>
+              <div class="shape"></div>
+             <h2>Le serveur a renvoyé un '{{ status_code }} {{ status_text }}".</h2>
+            <p>
+                S'il vous plaît laissez-nous savoir ce que vous faisiez quand cette erreur s'est produite. 
+                Nous allons le réparer dès que possible. 
+                Désolé pour tout inconvénient causé.
+            </p>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Facture {% endblock %}
+
+{% block content %}
+
+<div class="container mb-4">
+   <span class="h3"> Facture N° BILL-0234 du client</span> <span class="text-uppercase h3">Dauris Cedric</span>
+
+    <button type="button" class="btn bg_bouton_principal text-light mb-4  float-right ml-2"> <i class="fas fa-reply"></i> <a href="{{ path('agent_facture_liste') }}">Retour</a></button>
+    <button type="button" class="btn bg_bouton_principal text-light mb-4  float-right ml-2"> <i class="fas fa-file-pdf"></i> <a href="#">Télécharger la facture </a></button>
+
+</div>
+<div class="container pt-1  mb-5">
+    <center><div class="card shadow w-75 ">
+        <div class="card-body">
+          <img src="{{asset('build/images/facture2.jpg')}}" class="w-100" loading="lazy" style="">
+                   
+        </div>
+      </div>
+     </center>
+</div>
+
+{% endblock %}

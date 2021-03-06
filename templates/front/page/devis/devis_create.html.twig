@@ -1,0 +1,118 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Créer un devis {% endblock %}
+
+{% block content %}
+
+<div class="container mb-4">
+    <span class="h3">Créer un devis</span>
+    <button type="button" class="btn bg_bouton_principal text-light mb-4  float-right"> <i class="fas fa-reply"></i> <a href="{{ path('agent_devis_liste') }}">Retour</a></button>
+</div>
+<div class="container bg_container  pt-1 ">
+    
+    <div class="row mt-5 ml-5 mr-5 ">
+        <div class="col-md-12">
+        <div class="form-group ">
+            <select class="form-control ">
+                <option>Client</option>
+                <option>Sandra zansy</option>
+                <option>Olivier Baret</option>
+                <option>Coralie raphaelle </option>
+                <option>Damien Duret</option>
+                <option>Laura Pradet</option>
+                <option>Alexis Barbossa</option>
+                <option>Maunique Alba</option>
+                <option>Manon Sass</option>
+                <option>Maurice Duret</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    <div class="row ml-5 mr-5">
+       
+        <div class="col-md-6">
+            <div class="border-bottom">
+                <form class="mt-4">
+                    <div class="form-group mt-4">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Etat du devis</option>
+                            <option>x</option>
+                            <option>o</option>
+                        </select>
+                    </div>
+                   <div class="form-group">
+                    
+                    <input type="text" class="form-control" id="" placeholder="Libellé">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Quantité">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            
+            <div class=" border-bottom">
+                <form >
+                    <div class="form-group mt-4">
+                        <input type="text" class="form-control" id="" placeholder="Date d'échéance">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group ">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Article</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                                <option>Article XXXXXX</option>
+                            </select>
+                           
+                            </div>
+                        </div>
+                         <div class="col-md-3">
+                        <button type="button" class="btn bg_bouton_principal text-light"> <i class="fas fa-plus"></i> <a href="{{ path('agent_article_create') }}">Créer</a></button>
+  
+                    </div>
+                    </div>
+                   
+                    
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Prix HT €">
+                       </div>
+            
+                </form>
+                
+            </div>
+            
+        </div>
+       
+        
+    </div>
+    <div class="row ml-5 mr-5 ">
+        <div class="col-md-12">
+
+        <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Description"></textarea>
+<br>
+
+            <a href="#" type="button">Ajouter un article au devis <i class="fas fa-plus"></i> </a>
+
+        </div>
+        <button type="button" class="btn bg_bouton_principal w-100 text-light text-uppercase mb-5 "><a href="{{ path('agent_devis_liste') }}">Créer</a></button>
+    </div>
+    </div>
+   
+</div>
+
+{% endblock %}

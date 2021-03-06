@@ -1,0 +1,19 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %}Vous n'êtes pas autorisé à accéder à cette ressource (403){% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block content %}
+    {% block banner %}
+        <section class="no-banner"></section>
+    {% endblock %}
+    <section class="section-padding">
+        <div class="container text-center">
+            <h1 class="text-center">Oops! Vous n'êtes pas autorisé à accéder à cette ressource</h1>
+            <div class="shape"></div>
+            <p>Message : ({{ exception.message }}).</p>
+            <p>Désolé pour tout inconvénient causé.</p>
+        </div>
+    </section>
+{% endblock %}

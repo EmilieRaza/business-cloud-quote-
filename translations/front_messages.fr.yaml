@@ -1,0 +1,107 @@
+action:
+    delete: Supprimer
+    update: Modifier
+agent:
+    create:
+        flash:
+            success: 'Votre demande a bien été prise en compte.'
+        h1: 'Créez votre compte'
+        h2: 'Demande de contact'
+        title: 'Agent - Créer un compte'
+    field:
+        description: Description
+        firstname: Firstname
+        lastname: Lastname
+        phone1: Phone1
+        photo: photo
+    label:
+        confirmation_token: 'Confirmation Token'
+        created_at: 'Created At'
+        shortDescription: Description courte
+        description: Description
+        email: Email
+        enabled: Enabled
+        firstname: Prénom
+        last_login_at: 'Last Login At'
+        lastname: Nom
+        password: Password
+        phone1: Téléphone
+        roles: Roles
+        updated_at: 'Updated At'
+    read:
+        h1: 'Détails - Agent'
+        h2: Détails
+        title: 'Détails - Agent'
+    search:
+        h1: 'Rechercher un agent'
+        h2: Rechercher
+        title: 'Rechercher un agent'
+    update:
+        flash:
+            success: 'Votre profil a été modifié.'
+        h1: 'Modifier - Profil'
+        h2: 'Mettre vos informations à jour'
+        title: 'Modifier - Agent'
+button:
+    back: Retour
+    create: Ajouter
+    filter: Filtre
+    search: Rechercher
+    next: Suivant
+    previous: Précédent
+    read_title: Détails
+    submit: Soumettre
+    update_title: Modifier
+label:
+    filter_number_by_page: 'Nombre d''éléments par page'
+    filter_search: Rechercher
+nav:
+    account: Compte
+    account_back: Back-office
+    account_login: Connexion
+    account_logout: Déconnexion
+    account_profile: 'Mes informations'
+    account_register: Inscription
+    account_reset_email: 'Modifier l'' email'
+    account_reset_password: 'Modifier le mot de passe'
+    home: Accueil
+    lang: Langue
+    lang_en: Anglais
+    lang_fr: Français
+'no': Non
+photo:
+    crop:
+        flash:
+            success: 'Félicitations, votre photo a été correctement recadrée.'
+        h1: 'Ajuster votre photo'
+        h2: 'Recadrez votre photo afin qu''elle soit correctement affichée'
+        title: 'Ajustez votre photo'
+    update:
+        flash:
+            success: 'Félicitations, vous avez bien ajouté votre photo. Il ne vous reste plus qu’à la recadrer afin qu’elle soit affichée dans votre profil.'
+        title: 'Ajoutez une photo'
+        h1: 'Ajoutez une photo'
+        h2: 'Cette photo sera affichée dans votre profil'
+search:
+    action_th: Action(s)
+    no_data_found: 'Aucune donnée n''a été trouvée.'
+user_address:
+    label:
+        other: Entrez les codes postaux ou les villes dans lesquelles vous prospectez (séparés(ées) par des points virgule)
+        street: Numéro et voie
+        complement: Complément
+        zip_code: 'Code postal'
+        city: Ville
+'yes': Oui
+contact_message:
+    create:
+        title: Contactez-nous
+        h1: Contactez-nous
+        h2: Formulaire de contact
+    label:
+        email: Email
+        phone: Téléphone
+        firstname: Prénom
+        lastname: Nom
+        message: Message
+        subject: Objet

@@ -1,0 +1,52 @@
+version: '2'
+services:
+    apache:
+        build: .docker/apache
+        container_name: sf_apache
+        ports:
+          - 80:80
+        volumes:
+          - .docker/config/vhosts:/etc/apache2/sites-enabled
+          - .:/home/wwwroot/sf
+        networks:
+            - lan
+    mysql:
+        image: mysql:5.7.9
+        container_name: sf_mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: sf
+            MYSQL_USER: sf
+            MYSQL_PASSWORD: sf
+        ports:
+            - "3306:3306"
+        networks:
+            - lan
+    php:
+        build: .docker/php
+        container_name: sf_php
+        volumes:
+          - .:/home/wwwroot/sf
+        networks:
+            - lan
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: sf_phpmyadmin
+        environment:
+          PMA_HOST: mysql
+          PMA_PORT: 3306
+        ports:
+            - 8080:8080
+        networks:
+            - lan
+
+networks:
+    lan:
+        driver: macvlan
+        driver_opts:
+            parent: eth1
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.1.0/24
+                  gateway: 192.168.1.1

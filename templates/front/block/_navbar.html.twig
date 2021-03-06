@@ -1,0 +1,173 @@
+{% trans_default_domain 'front_messages' %}
+{% set route = app.request.get('_route') %}
+ <!-- Sidebar  -->
+ <div class="wrapper">
+ <nav id="sidebar">
+    <div class="sidebar-header">
+        <h3>BC - QUOTE </h3>
+        <strong>BC</strong>
+        <small>Employé</small>
+        
+    </div>
+
+    <ul class="list-unstyled components" >
+        <!-- <li class="active"> -->
+            <li class="{% if slug == 'client_liste' or  slug == 'client_create' or  slug == 'client_update'%}active{% endif %}" >
+            <a href="#clientSousmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-users"></i>
+                Clients
+            </a>
+            <ul class="collapse list-unstyled Submenu" id="clientSousmenu">
+                <li>
+                    <a href="{{ path('agent_client_liste') }}">Liste</a>
+                </li>
+                <li>
+                    <a href="{{ path('agent_client_create') }}">Ajouter</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+        <li class="{% if slug == 'prospect_liste' or  slug == 'prospect_create' or  slug == 'prospect_update' or  slug == 'prospect_read'%}active{% endif %}">
+                <a  href="#prospectSousmenu" data-toggle="collapse"  aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-user"></i>
+                    Prospect
+                </a>
+                <ul class="collapse list-unstyled Submenu" id="prospectSousmenu"  >
+                    <li>
+                        <a href="{{ path('agent_prospect_liste') }}" >Liste</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('agent_prospect_create') }}">Ajouter</a>
+                    </li>
+                </ul>
+            </li>
+           
+            <li class="{% if slug == 'article_liste' or  slug == 'article_create' or  slug == 'article_update' or  slug == 'article_read'%}active{% endif %}">
+                <a  href="#articleSousmenu" data-toggle="collapse"  aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-tags"></i>
+                    Articles
+                </a>
+                <ul class="collapse list-unstyled Submenu" id="articleSousmenu"  >
+                    <li>
+                        <a href="{{ path('agent_article_liste') }}">Liste</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('agent_article_create') }}">Ajouter</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="{% if slug == 'facture_liste' or  slug == 'facture_create' or  slug == 'facture_read'%}active{% endif %}">
+                <a  href="#factureSousmenu" data-toggle="collapse"  aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    Factures
+                </a>
+                <ul class="collapse list-unstyled Submenu" id="factureSousmenu"  >
+                    <li>
+                        <a href="{{ path('agent_facture_liste') }}">Liste</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('agent_facture_create') }}">Ajouter</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="{% if slug == 'devis_liste' or  slug == 'devis_create' or  slug == 'devis_read' or  slug == 'devis_update'%}active{% endif %}">
+                <a  href="#devisSousmenu" data-toggle="collapse"  aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-file-contract"></i>
+                   Devis
+                </a>
+                <ul class="collapse list-unstyled Submenu" id="devisSousmenu"  >
+                    <li>
+                        <a href="{{ path('agent_devis_liste') }}">Liste</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('agent_devis_create') }}">Ajouter</a>
+                    </li>
+                </ul>
+            </li>
+        </li>
+
+
+        <li class="{% if slug == 'echeance'%}active{% endif %}">
+            <a href="{{ path('agent_echeance') }}">
+                <i class="far fa-calendar-alt"></i>
+                Echeance clients
+            </a>
+        </li>
+     
+        <li>
+            <a href="#">
+                <i class="fas fa-chart-pie"></i>
+                Statistiques
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-file-invoice-dollar"></i>
+                Note de frais 
+            </a>
+        </li>
+    </ul>
+
+    <ul class="list-unstyled CTAs">
+        <li>
+            <a href="#" class="download">Mon Compte</a>
+        </li>
+        <li>
+            <a href="#" class="download">FR/EN</a>
+        </li>
+        <li>
+            <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Déconnexion</a>
+        </li>
+    </ul>
+</nav>
+ <!-- Page Content  -->
+ <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            
+            <button type="button" id="sidebarCollapse" class="btn bg_bleu1"  >
+                <i class="fas fa-2x fa-arrows-alt-h text-light"></i>
+            </button>
+            <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Messagerie">
+                <i class="fas fa-2x fa-comments text-light"></i>
+            </button>
+            <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Factures reglées">
+                <i class="fas fa-2x fa-file-invoice-dollar text-light"></i>
+            </button>
+            <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Factures impayées">
+                <i class="fas fa-2x fa-file-invoice-dollar couleur_rose"></i>
+                <span class="text-light cachee">Factures impayées</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-justify"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+               
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link float-right" href="#">Alexia Heren <br>
+                        Société MBS</a>
+                    </li>
+                    <img src="{{asset('build/images/user1.jpg')}}" class="rounded-circle w-25 h-25" alt="logo BCQUOTE" loading="lazy" style="height:70px!important;width:70px!important;">
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script>
+// sidebar
+$(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+});
+</script>

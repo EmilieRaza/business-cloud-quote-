@@ -1,0 +1,62 @@
+{# <footer class="mt-5 w-100 p-3" id="prefooter" >
+    <div class="container mt-5 w-100">
+        <div class="row mb-5 w-100">
+            <div class="col-12 col-sm-12 col-md-6 text-center">
+                <img src="{{asset('build/images/logo.png')}}" class="img-fluid" alt="logo réseau funéraire" loading="lazy">
+                <button type="button" class="btn btn_blue text-uppercase p-2 mt-5 mb-5  w-100">
+                <a href="{{ path('front_page_contact') }}" class=" text-light">Contactez-nous</a>
+                </button>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 d-flex flex-column mb-3 mb-sm-0 pl-5">
+                <p class="color_orange text-uppercase fw-bold  h-5 text-left"><b>Plan du site</b></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="{{ path('front_page_contact') }}" class="text-decoration-none text-dark">
+                            <i class="fas fa-check-circle color_orange"></i> Contact</a><br>
+                            <a href="{{path('front_page_urgence-deces')}}" class="text-decoration-none text-dark">
+                            <i class="fas fa-check-circle color_orange"></i> Obsèque</a><br>
+                            <a href="{{path('front_page_monuments')}}" class="text-decoration-none text-dark">
+                                <i class="fas fa-check-circle color_orange"></i> Marbrerie</a>
+            
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{{path('front_agent_search',{ page: 1, filter: { search: '', number_by_page: 15 }})}}" class="text-decoration-none text-dark">
+                            <i class="fas fa-check-circle color_orange"></i> Nos agents</a><br>
+        
+                            <a href="{{ path('front_quotation_request_create') }}" class="text-decoration-none text-dark">
+                            <i class="fas fa-check-circle color_orange"></i> Devis</a>          
+                 
+                    </div>
+                </div>
+                    
+                   
+            </div>
+            <!-- <div class="col-12 col-sm-12 col-md-5 mt-3 mt-sm-0">
+                <p class="color_orange text-uppercase fw-bold text-left h-5"><b>Contact</b></p>
+                <div class="row">
+                    <div class="col-md-2">
+                        <button class="btn rounded-circle btn_orange"><i class="fas fa-map-marked text-light"></i></button>
+                    </div>
+                    <div class="col-md-10">
+                         <p>  153 route de Corbeil 91700 Sainte-Geneviève-des-Bois</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <button class="btn rounded-circle btn_orange"><i class="fas fa-phone-alt text-light"></i></button>
+                    </div>
+                    <div class="col-md-10">
+                         <p>   01 60 15 19 15</p>
+                    </div>
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+    <div class="row bg-dark text-center p-3">
+        <div class="col-12">
+            <a href="https://www.bhinternet.fr" target="blank" class="text-white text-decoration-none">BH Internet | Création site Internet | {{ "now"|date("Y") }}</a>
+            <a href="mentions-legales" target="blank" class="text-white text-decoration-none">Mentions légales</a>
+        </div>
+    </div>
+</footer> #}
