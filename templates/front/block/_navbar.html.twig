@@ -137,10 +137,14 @@
             </button>
             <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Factures reglées">
                 <i class="fas fa-2x fa-file-invoice-dollar text-light"></i>
+
             </button>
             <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Factures impayées">
-                <i class="fas fa-2x fa-file-invoice-dollar couleur_rose"></i>
-                <span class="text-light cachee">Factures impayées</span>
+                 <a href="{{ path('agent_factures_impayees') }}">
+                    <i class="fas fa-2x fa-file-invoice-dollar couleur_rose"></i>
+                     {% if slug == 'factures-impayees'%} 
+                     <span class="couleur_rose">  Factures impayées </span>{% endif %}
+                </a>
             </button>
             <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-align-justify"></i>
