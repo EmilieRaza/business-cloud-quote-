@@ -129,7 +129,11 @@
                 <i class="fas fa-2x fa-arrows-alt-h text-light"></i>
             </button>
             <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Messagerie">
-                <i class="fas fa-2x fa-comments text-light"></i>
+                <a href="{{ path('agent_messagerie') }}">
+                    <i class="fas fa-2x fa-comments text-light"></i>
+                     {% if slug == 'messagerie'%} <span class="text-light">  Messagerie Interne </span>{% endif %}
+                </a>
+                
             </button>
             <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Factures reglées">
                 <i class="fas fa-2x fa-file-invoice-dollar text-light"></i>

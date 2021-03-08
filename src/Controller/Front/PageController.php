@@ -219,5 +219,13 @@ class PageController extends AbstractController
         ]);
     }
 
-
+ /**
+     * @Route("/messagerie", name="agent_messagerie")
+     */
+    public function agentMessagerie()
+    {
+        return $this->render('front/page/messagerie.html.twig', [
+            'slug'=>'messagerie',
+        ]);
+    }
 }
