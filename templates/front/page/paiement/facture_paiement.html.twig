@@ -1,0 +1,59 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Payer ma facture {% endblock %}
+
+{% block content %}
+
+<div class="container mb-4">
+
+  <div class="row">
+    <div class="col-md-8">
+        <span class="h3">Payer ma facture</span>          
+    </div>
+  </div>  
+</div>
+
+<div class="container border shadow p-5">
+  <div class="row  mb-3">
+    <label><small>Date de règlement</small></label>
+    <input type="date" id="datepicker" class="form-control " placeholder="Date de règlement">
+  </div>
+  <div class="row  mb-5">
+    <select class="form-control">
+      <option>Selectionner une facture</option>
+      <option>BILL-8645</option>
+      <option>BILL-8623</option>
+      <option>BILL-8691</option>
+      <option>BILL-8654</option>
+    </select> 
+  </div>
+   
+
+    <div class="row mt-3">
+    <div class="col-md-6 ">
+      <ul class="list-group shadow">
+        <li class="list-group-item bg_bouton_principal">
+          <h5 class="text-center text-light">Pour ma facture </h5>
+        </li>
+        <li class="list-group-item"> <h5>Référence: <small>BILL-8623</small> </h5></li>
+        <li class="list-group-item"> <h5>Montant Total TTC: <small>2789 €</small> </h5></li>
+    </ul>
+    </div>
+    <div class="col-md-6">
+      <ul class="list-group shadow">
+        <li class="list-group-item bg_bouton_principal">
+          <h5 class="text-center text-light">Je souhaite payer par</h5>
+        </li>
+        <li class="list-group-item"> 
+          <button type="button" class="btn bg_bouton_principal  rounded-0 text-light w-100 mb-3" >Prélévement</button>
+          <button type="button" class="btn bg_bouton_principal rounded-0 text-light w-100 mb-3">Carte</button>
+     
+        </li>
+      
+    </ul>
+    </div>
+  </div>
+    
+</div>
+
+{% endblock %}
