@@ -136,7 +136,11 @@
                 
             </button>
             <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Factures reglées">
-                <i class="fas fa-2x fa-file-invoice-dollar text-light"></i>
+                <a href="{{ path('agent_factures_payees') }}">
+                    <i class="fas fa-2x fa-file-invoice-dollar text-light"></i>
+                     {% if slug == 'factures-payees'%} 
+                     <span class="text-light">  Factures payées </span>{% endif %}
+                </a>
 
             </button>
             <button type="button" id="sidebarCollapse" class="btn bg_bleu1 ml-2" data-toggle="tooltip" data-placement="bottom" title="Factures impayées">
