@@ -138,39 +138,8 @@ $(document).ready(function(){
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
-/////////////////////////////////////////////////////
-//// Display and hide Vins category to la-carte/////
-///////////////////////////////////////////////////
-// $('#vinsDuMaroc').collapse({
-//     show: true
-//     })
 
-// $('#vinsDeFrance').collapse({
-//     show: true
-//     })
 
-$(document).ready(function(){
-    $("#btnFrance").on("click",function(){
-    // $(".btnFrance").click(function(){
-      $(".vinsDeFrance").toggleClass("hideVins");
-    });
-});
-
-$(document).ready(function(){
-    $("#btnFrance").on("click",function(){
-    //$(".btnMaroc").click(function(){
-      $(".vinsDuMaroc").toggleClass("hideVins");
-    });
-});
-
-function rtn() {
-    window.history.back();
- }
-// $(document).ready(function() {
-//     $("#titreBtnVins").on("click",function (){
-//         if($("#titreBtnVins").val()=='Afficher')
-//             $("#titreBtnVins").val('Cacher')
-//         else if($("#titreBtnVins").val()=='Cacher')
-//             $("#titreBtnVins").val('Afficher')
-//     });
-// });
+$( function() {
+    $( "#datepicker" ).datepicker();
+} );

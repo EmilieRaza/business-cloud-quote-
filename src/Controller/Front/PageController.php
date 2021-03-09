@@ -247,4 +247,14 @@ class PageController extends AbstractController
             'slug'=>'factures-payees',
         ]);
     }
+
+    /**
+     * @Route("/paiement", name="paiement_facture")
+     */
+    public function paiement()
+    {
+        return $this->render('front/page/paiement/facture_paiement.html.twig', [
+            'slug'=>'factures-paiement',
+        ]);
+    }
 }
