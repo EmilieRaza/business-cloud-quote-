@@ -238,4 +238,13 @@ class PageController extends AbstractController
             'slug'=>'factures-impayees',
         ]);
     }
+    /**
+     * @Route("/factures-payees", name="agent_factures_payees")
+     */
+    public function facturePayees()
+    {
+        return $this->render('front/page/facture/factures_payees.html.twig', [
+            'slug'=>'factures-payees',
+        ]);
+    }
 }
