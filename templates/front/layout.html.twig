@@ -4,15 +4,22 @@
 {% endblock %}
 
 {% block body %}
-    <body>
+    <body  
+    {% if slug == 'login'%} 
+        style="background-color: #EBEDEF;!important;"
+    {% endif %}
+    {% if slug == 'register' or slug == 'password-lost'%} 
+        style="background-color: #EBEDEF;!important;"
+    {% endif %}
+    >
         {% block flash_message %}
             {% include "block/_flash_message.html.twig" %}
         {% endblock %}
-
-        {% block navbar %}
-            {% include "front/block/_navbar.html.twig" %}      
-        {% endblock %}
-
+        {% if  slug != 'login' and slug != 'register' and slug != 'password-lost'%} 
+            {% block navbar %}
+                {% include "front/block/_navbar.html.twig" %}      
+            {% endblock %}
+        {% endif %}  
         {% block content %}
             {% block banner%}{% endblock %}
         {% endblock %}

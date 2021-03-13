@@ -1,0 +1,95 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Inscription {% endblock %}
+
+{% block content %}
+
+<div id="Clouds">
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Background"></div>
+
+    <div class="h-100 w-100 position-absolute" style="width:100%;top:0px!important; z-index:2!important">
+    <nav class="navbar bg_bleu1 p-0">
+    <div class="container-fluid bg_bleu1 pl-4  pt-2 pb-2">
+        <a class="navbar-brand float-left text-light">BUSINESS CLOUD QUOTE</a>
+        <form class="d-flex">
+       
+        <button type="button" class="ml-2 btn btn-outline-light"><a  href="{{ path('login') }}">Déjà inscrit </a></button>
+        </form>
+    </div>
+    </nav>
+    <div class="container" style="width:100%; height:100%!important; z-index:2!important">
+        <div class="container-fluid w-50 mt-5">
+            <div class="card" style="border-radius:30px!important">
+                <div class="card-img-top bg_bleu1" style="border-top-right-radius:30px!important;border-top-left-radius:30px!important;height:150px">
+                    <center> <img src="{{asset('build/images/logo2.png')}}" class="rounded-circle mt-5 bg-light" alt="logo BCQUOTE" loading="lazy" style="height:200px!important;width:200px!important;"> </center> 
+
+                </div>
+                <div class="card-body mt-5 pt-4">
+                 <h6 class="text-center text-uppercase mb-4">Formulaire d'inscription</h6>
+                   
+                    <form>                        
+                            <div class="form-group">
+                                <i class="fas fa-user"></i>
+                                <label>Nom</label>
+                                <br>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                                {# <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> #}
+                            </div>
+                            <div class="form-group">
+                                <i class="fas fa-user"></i>
+                                <label>Prenom</label>
+                                <br>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                                {# <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> #}
+                            </div>
+                            <div class="form-group">
+                                <i class="far fa-envelope"></i>
+                                <label for="exampleInputPassword1">Adresse Email</label>
+                                <br>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                                {# <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> #}
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                     <i class="fas fa-unlock-alt"></i> <label for="exampleInputPassword1"> Mot de passe</label><br>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                     <i class="fas fa-unlock-alt"></i> <label for="exampleInputPassword1"> Confirmer mot de passe</label><br>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                {# <input type="checkbox" class="form-check-input" id="exampleCheck1"> #}
+                                {# <label class="form-check-label" for="exampleCheck1">Check me out</label> #}
+                            </div>
+                            <button type="button" class="btn w-100 mt-2 bg_bouton_principal text-light pl-4 pr-4 float-right mt-4 mb-2 position-relative "><a  href="{{ path('login') }}">S'inscrire</a></button>
+                                </div>
+                            </div> 
+                        </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+  {% endblock %}

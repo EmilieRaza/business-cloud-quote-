@@ -37,3 +37,6 @@ $(document).ready(function(){
         $(this).next('.custom-file-label').html(fileName);
     });
 });
+
+
+$('.phrase').arctext({radius: 300});

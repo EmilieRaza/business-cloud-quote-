@@ -51,6 +51,8 @@ Encore
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
 
+
+    .enableLessLoader()
     /*
      * FEATURE CONFIG
      *
@@ -76,6 +78,8 @@ Encore
 
     // enables Sass/SCSS support
     .enableSassLoader()
+
+    .enableLessLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

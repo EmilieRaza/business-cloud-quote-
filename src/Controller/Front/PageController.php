@@ -18,7 +18,7 @@ class PageController extends AbstractController
     
 // -------------------------------------CLIENT-----------------------------------
     /**
-     * @Route("/", name="agent_client_liste")
+     * @Route("/client-liste", name="agent_client_liste")
      */
     public function clientListe()
     {
@@ -27,6 +27,33 @@ class PageController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/", name="login")
+     */
+    public function login()
+    {
+        return $this->render('front/page/authentification/login.html.twig', [
+            'slug'=>'login',
+        ]);
+    }
+        /**
+     * @Route("/inscription", name="register")
+     */
+    public function register()
+    {
+        return $this->render('front/page/authentification/register.html.twig', [
+            'slug'=>'register',
+        ]);
+    }
+        /**
+     * @Route("/mot-de-passe-oublie", name="password-lost")
+     */
+    public function passwordLost()
+    {
+        return $this->render('front/page/authentification/password_lost.html.twig', [
+            'slug'=>'password-lost',
+        ]);
+    }
      /**
      * @Route("/client-create", name="agent_client_create")
      */
