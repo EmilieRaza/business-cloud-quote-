@@ -143,3 +143,6 @@ $(function () {
 $( function() {
     $( "#datepicker" ).datepicker();
 } );
+
+$('.phrase').arctext({radius: 300});    
+$('#phrase').arctext({radius: 300});    
