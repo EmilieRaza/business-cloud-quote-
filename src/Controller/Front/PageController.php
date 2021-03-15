@@ -284,4 +284,13 @@ class PageController extends AbstractController
             'slug'=>'factures-paiement',
         ]);
     }
+    /**
+     * @Route("/statistiques", name="statistiques")
+     */
+    public function statistiques()
+    {
+        return $this->render('front/page/statistiques.html.twig', [
+            'slug'=>'statistiques',
+        ]);
+    }
 }

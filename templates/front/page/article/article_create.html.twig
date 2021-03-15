@@ -14,12 +14,16 @@
         <div class="col-md-12">
             <div class=" border-bottom">
                 <form >
-                   
                         <label for="exampleInputEmail1">Libelle de l'article </label>
                        <div class="form-group">
                            <input type="email" class="form-control" id="exampleFormControlInput1" >
                         </div>
-                        <label for="exampleInputEmail1">TVA applicable (%) </label>
+                        {# Dropdown Class #}
+                        <label for="exampleForm2">Numéro de compte</label>
+                            <input type="text" id="exampleForm2" class="form-control cascader pb-3">
+                            <div class="cascader-list main-list">
+                            </div>
+                        <label class="pt-3">TVA applicable (%) </label>
                         <div class="form-group mt-1">
                             <select class="form-control" id="exampleFormControlSelect1">
                                 <option>20 %</option>
@@ -40,15 +44,99 @@
                            <label for="exampleInputEmail1">Description</label>
                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                            <br>
-                          
                 </form>
-                
             </div>
-            
         </div>
         <button type="button" class="btn bg_bouton_principal w-100 text-light text-uppercase mb-5 ml-3 mr-3"><a href="{{ path('agent_client_liste') }}">Mettre à jours</a></button>
     </div>
    
 </div>
+<script>
+var country = {
+    Classe_1: {
+        Capital: ["101000","104000","104000","104000","104000","104000","104000",],
+        Primes_liées_au_capital: ["104000", "104000","104000","104000","104000","104000","104000","104000",],
+        slaskie: ["katowice", "chorzów"]
+    },
+    Classe2: {
+        alaska: ["city1", "city2"],
+        minessota: ["city1", "city2"]
+    }
+};
 
+
+$(document).ready(function () {
+
+    var $cascader = $(".cascader");
+    var $cascaderList = $(".cascader-list");
+    var $inputCascader = $("#exampleForm2");
+
+    for (var i in country) {
+        //console.log("Country: " + i);
+        var $ul = $('<ul class="list-group sub-list ">');
+        var $li = $('<li class="list-group-item list-group-item-action st">');
+        var $arrow = $('<i class="fas fa-angle-right float-right mt-1"></i>');
+        var $one = $(document.createDocumentFragment());
+        for (var j in country[i]) {
+            //console.log(i + ": " + j);
+            var $ul2 = $('<ul class="list-group sub-list ">');
+            var $li2 = $('<li class="list-group-item list-group-item-action nd w-100">');
+            var $arrow2 = $('<i class="fas fa-angle-right float-right mt-1 "></i>');
+            var $two = $(document.createDocumentFragment());
+            for (var k = 0; k < country[i][j].length; k++) {
+                //console.log(j + ": " + country[i][j][k]);
+
+                var $li3 = $('<li class="list-group-item list-group-item-action rd">');
+
+
+                $two.append($li3.text(country[i][j][k]+" "));
+            }
+
+            $one.append($li2.text(j+" ").append($arrow2).append($ul2.append($two)));
+
+        }
+
+        $cascaderList.append($li.text(i+" ").append($arrow).append($ul.append($one)));
+    }
+
+    $cascader.on("click", function () {
+        $(".main-list").slideDown(200);
+    });
+
+    $(".list-group-item.st").on("click", function(){
+        $(".list-group-item.st").removeClass("active");
+        $(".list-group-item.st").find("> ul").hide(0);
+        $(this).addClass("active");
+        $(this).find("> ul").show(0);
+    });
+
+    $(".list-group-item.nd").on("click", function(){
+        $(".list-group-item.nd").removeClass("active");
+        $(".list-group-item.nd").find("> ul").hide(0);
+        $(this).addClass("active");
+        $(this).find("> ul").show(0);
+    });
+
+    $(".list-group-item.rd").on("click", function(){
+        $(".list-group-item.rd").removeClass("active");
+        $(this).addClass("active");
+
+        var one=$(this).text().trim();
+        var twoT, threeT;
+        twoT = $(this).parent().parent().text().split(" ");
+        var two = twoT[0].trim();
+        threeT = $(this).parent().parent().parent().parent().text().split(" ");
+        var three = threeT[0].trim();
+
+        $inputCascader.val(two+"/"+one);
+       
+
+        $(".main-list").slideUp(200);
+    });
+
+
+});
+
+
+                        </script>
 {% endblock %}

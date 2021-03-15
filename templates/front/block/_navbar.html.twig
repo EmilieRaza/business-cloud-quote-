@@ -94,8 +94,8 @@
             </a>
         </li>
      
-        <li>
-            <a href="#">
+        <li class="{% if slug == 'statistiques'%}active{% endif %}">
+            <a href="{{ path('statistiques') }}">
                 <i class="fas fa-chart-pie"></i>
                 Statistiques
             </a>
