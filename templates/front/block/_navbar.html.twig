@@ -111,13 +111,15 @@
 
     <ul class="list-unstyled CTAs">
         <li>
-            <a href="#" class="download">Mon Compte</a>
+            <a href="{{ path('mon-compte') }}" class="download">Mon Compte <span class="float-right"> <i class="fas fa-user-circle"></i></span></a>
         </li>
+
         <li>
-            <a href="#" class="download">FR/EN</a>
+            <a href="#" class="download">FR/EN <span class="float-right"><i class="fas fa-globe-americas"></i></span></a>
         </li>
+      
         <li>
-            <a href="{{ path('login') }}" class="article">Déconnexion</a>
+            <a href="{{ path('login') }}" class="article">Déconnexion <span class="float-right"> <i class="fas fa-sign-out-alt"></i></span></a>
         </li>
     </ul>
 </nav>

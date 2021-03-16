@@ -311,4 +311,13 @@ class PageController extends AbstractController
             'slug'=>'note-de-frais-read',
         ]);
     }
+     /**
+     * @Route("/mon-compte", name="mon-compte")
+     */ 
+    public function monCompte()
+    {
+        return $this->render('front/page/compteUtilisateur/user_account_read.html.twig', [
+            'slug'=>'mon-compte',
+        ]);
+    }
 }
