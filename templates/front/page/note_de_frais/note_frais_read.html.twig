@@ -1,0 +1,97 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Note de frais {% endblock %}
+
+{% block content %}
+
+<div class="container mb-4">
+   <span class="h3"> Note de frais</span> &nbsp; <i class="fas fa-2x  fa-caret-right"></i>  <span class="h4 text-uppercase"> Achat disque dur - 02/09/2020</span>
+
+
+    <button type="button" class="btn bg_bouton_principal text-light mb-4  float-right ml-2"> <i class="fas fa-reply"></i> <a href="{{ path('note-de-frais') }}">Retour</a></button>
+    
+</div>
+<div class="container   pt-1  mb-5">
+    <div class="card shadow ">
+        <div class="card-body">
+            <br>
+            <span ><b>Date:</b> 02/09/2020</span>
+            <span class="float-right"><b>Salarié:</b> Alexia Heren</span>  <br><br>
+            <h5><span class="badge bg_bouton_principal w-100 text-left text-light"><i class="fas fa-play"></i> Information Générale</span></h5>
+        
+            <div class="card mt-3">
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6><u>Salarié</u></h6>
+                        <b>Nom:</b> Alexia <br>
+                        <b>Prémom:</b> Heren<br>
+                        <b>Fonction:</b> Commerciale<br>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h6><u>Société</u></h6>
+                        <b>Dénomionation Sociale</b> MBS<br>
+                        <b>Activité:</b> Patisserie<br><br>
+                        <b>Numéro de SIRET: </b> 362 521 879 00034 <br>
+                        <b>Numéro TVA: </b> FR31734820078 <br>
+                        <b>Numéro de RCS:</b> RCS Paris 654 987 321 <br>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+              <h5><span class="badge bg_bouton_principal w-100 text-left text-light mt-3"><i class="fas fa-play"></i> Coordonnées</span></h5>
+        
+            <div class="card mt-3">
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <b>Email:</b> lauraeva@mbs.com <br>
+                        <b>Téléphone</b> 0375289174<br>
+                      </div>
+                    <div class="col-md-6">
+                        <h6><u>Adresse</u></h6>
+                        <b>Numéro de rue et voie: </b> 33 rue de seine<br>
+                        <b>Code postale: </b> 91000<br>
+                        <b>Ville:  </b> Evry <br>
+                    </div>
+                </div>
+            </div>
+               
+           
+              
+        </div>
+         <h5><span class="badge bg_bouton_principal w-100 text-left text-light mt-3"><i class="fas fa-play"></i> Informations </span></h5>
+        
+            <div class="card mt-3">
+                <div class="card-body">
+                 <div class="row">
+                     <div class="col-md-12">
+                        <b>Libelle:</b>Achat d'un disque dur <br>
+                        <b>Catégorie de dépense:</b> Petit équipement<br>
+                        <b>Montant TTC € :</b> 180 €<br>
+                        <b>TVA % :</b>3.20 %<br>
+                        <b>Commentaire:</b> Sans commentaire<br>
+                     </div>
+                     
+                 </div>
+                </div>
+              </div>
+      </div> 
+</div>
+
+<div class="w-100 p-5 bg_bouton_principal">
+    <div class="container mb-4">
+    <span class="h3 text-light" id="liste_factures_client">  Ticket de caisse du 02/09/2020  </span>
+
+      <center><div class="card shadow w-50 ">
+        <div class="card-body">
+          <img src="{{asset('build/images/ticketCaisse.jpg')}}" class="w-100" loading="lazy" style="">
+                   
+        </div>
+      </div>
+     </center>
+</div>
+</div>
+{% endblock %}

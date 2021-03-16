@@ -293,4 +293,22 @@ class PageController extends AbstractController
             'slug'=>'statistiques',
         ]);
     }
+    /**
+     * @Route("/note-de-frais-liste", name="note-de-frais")
+     */ 
+    public function noteDeFraisListe()
+    {
+        return $this->render('front/page/note_de_frais/note_frais_liste.html.twig', [
+            'slug'=>'note-de-frais',
+        ]);
+    }
+    /**
+     * @Route("/note-de-frais", name="note-de-frais-read")
+     */ 
+    public function noteDeFrais()
+    {
+        return $this->render('front/page/note_de_frais/note_frais_read.html.twig', [
+            'slug'=>'note-de-frais-read',
+        ]);
+    }
 }

@@ -1,0 +1,571 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Statistiques {% endblock %}
+
+{% block content %}
+{# 
+<div class="container mb-4">
+
+  <div class="row">
+    <div class="col-md-8">
+        <span class="h3">Statistiques</span>          
+    </div>
+  </div>  
+</div> #}
+
+<div class="container border shadow p-5 mb-5">
+  <div class="row border-top border-bottom border-dark">
+    <div class="col-md-4 border-right border-dark  ">
+      <div class="row  pb-2 pt-2">
+        <div class="col-md-4">
+          <small class="text-uppercase"><b>Projets</b></small>
+        </div>
+        <div class="col-md-8">
+          <h4><span class="badge bg_bouton_principal text-light pl-5 pr-5 w-100">50</span></h4>
+        </div>
+      </div> 
+    </div>
+    <div class="col-md-4 border-right border-dark">
+      <div class="row pb-2 pt-2">
+        <div class="col-md-5 ">
+          <small class="text-uppercase"><b>Projets Actifs</b></small>
+        </div>
+        <div class="col-md-7">
+          <h4><span class="badge bg_bouton_principal text-light pl-5 pr-5 w-100">30</span></h4>
+        </div>
+      </div> 
+    </div>
+    <div class="col-md-4">
+      <div class="row pb-2 pt-2">
+        <div class="col-md-6">
+          <small class="text-uppercase"><b>Projets en retard</b></small>
+        </div>
+        <div class="col-md-6">
+          <h4><span class="badge bg_bouton_principal pl-5 pr-5 w-100 couleur_rose bordure_texte">10</span></h4>
+        </div>
+      </div> 
+    </div>
+</div>
+
+
+<div class="row w-100 mt-5 mb-5 shadow">
+    <div class="card w-100">
+      <div class="card-header bg_bouton_principal text-light text-center"><b>PROJETS PAR STATUT</b></div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+        <div class="bg-white rounded-lg p-5 shadow">
+          <h2 class="h6 font-weight-bold text-center mb-4">Nouveau</h2>
+          <div class="progress mx-auto" data-value='15'>
+            <span class="progress-left">
+                <span class="progress-bar border-primary"></span>
+            </span>
+            <span class="progress-right">
+                <span class="progress-bar border-primary"></span>
+            </span>
+            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+              <div class="h2 font-weight-bold">15<sup class="small">%</sup></div>
+            </div>
+          </div>
+          <div class="row text-center mt-4">
+            <div class="col-6 border-right">
+              <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Mes projets</span>
+            </div>
+            <div class="col-6">
+              <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Autres</span>
+            </div>
+          </div> 
+          <!-- END -->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn bg_bouton_principal text-light w-100 mt-5" data-toggle="modal" data-target="#exampleModal">
+          <i class="fas fa-clipboard-list"></i> <small>Mes Nouveaux projets</small>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade bd-example-modal-lg " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mes Nouveaux projets</h5>
+                  <button type="button" class="Fermé" data-dismiss="modal" aria-label="Fermé">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table class="table  table-striped table-hover bg-light shadow">
+                      <thead>
+                        <tr>
+                          <th>Libellé</th>
+                          <th>Client</th>
+                          <th>Description</th>
+                          <th>Crée le</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                        <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                        <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermé</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="bg-white rounded-lg p-5 shadow">
+          <h2 class="h6 font-weight-bold text-center mb-4">En attente</h2>
+          <div class="progress mx-auto" data-value='25'>
+            <span class="progress-left">
+                          <span class="progress-bar border-danger"></span>
+            </span>
+            <span class="progress-right">
+                          <span class="progress-bar border-danger"></span>
+            </span>
+            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+              <div class="h2 font-weight-bold">25<sup class="small">%</sup></div>
+            </div>
+          </div>
+          <div class="row text-center mt-4">
+            <div class="col-6 border-right">
+              <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Mes projets</span>
+            </div>
+            <div class="col-6">
+              <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Autres</span>
+            </div>
+          </div> 
+          <!-- END -->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn bg_bouton_principal text-light w-100 mt-5" data-toggle="modal" data-target="#modal_projet_attente">
+          <i class="fas fa-clipboard-list"></i> <small>Mes projets en attente</small>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade bd-example-modal-lg" id="modal_projet_attente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mes projets en attente</h5>
+                  <button type="button" class="Fermé" data-dismiss="modal" aria-label="Fermé">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <table class="table  table-striped table-hover bg-light shadow">
+                      <thead>
+                        <tr>
+                          <th>Libellé</th>
+                          <th>Client</th>
+                          <th>Description</th>
+                          <th>Crée le</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                        <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                        <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermé</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="bg-white rounded-lg p-5 shadow">
+          <h2 class="h6 font-weight-bold text-center mb-4">En cours</h2>
+
+          <!-- Progress bar 3 -->
+          <div class="progress mx-auto" data-value='40'>
+            <span class="progress-left">
+                          <span class="progress-bar border-success"></span>
+            </span>
+            <span class="progress-right">
+                          <span class="progress-bar border-success"></span>
+            </span>
+            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+              <div class="h2 font-weight-bold">40<sup class="small">%</sup></div>
+            </div>
+          </div>
+          <!-- END -->
+          <div class="row text-center mt-4">
+            <div class="col-6 border-right">
+              <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Mes projets</span>
+            </div>
+            <div class="col-6">
+              <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Autres</span>
+            </div>
+          </div> 
+          <!-- END -->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn bg_bouton_principal text-light w-100 mt-5" data-toggle="modal" data-target="#modal_projet_encours">
+          <i class="fas fa-clipboard-list"></i> <small>Mes projets en cours</small>
+          </button>
+          <!-- Modal -->
+         <div class="modal fade bd-example-modal-lg" id="modal_projet_encours" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mes projets en cours</h5>
+                  <button type="button" class="Fermé" data-dismiss="modal" aria-label="Fermé">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <table class="table  table-striped table-hover bg-light shadow">
+                      <thead>
+                        <tr>
+                          <th>Libellé</th>
+                          <th>Client</th>
+                          <th>Description</th>
+                          <th>Crée le</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                        <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                          <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                        <tr>
+                        <td>Création de site marchand</td>
+                          <td>Alexander Colle</td>
+                          <td>lLorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dolorum minima, sapiente ex maiores quibusdam nulla nesciunt consequuntur quaerat harum vitae</td>
+                          <td>15/03/2021 </td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermé</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </li>
+      </ul>
+    </div>
+    {# <div class="row w-100"> #}
+      
+</div>
+
+{# #############################" #}
+<div class="row w-100 mt-5 shadow">
+  <div class="card w-100">
+        <div class="card-header bg_bouton_principal text-light text-center text-uppercase"><b>projets par priorité</b>
+        </div>
+        <table class="graph w-100">
+          <tbody>
+            <tr style="height:85%">
+              <th scope="row">&nbsp; Alexander Abbey</th>
+              <td><span>85%</span></td>
+            </tr>
+            <tr style="height:38%">
+              <th scope="row">&nbsp; Thierry Thomas</th>
+              <td><span>38%</span></td>
+            </tr>
+            <tr style="height:35%">
+              <th scope="row">&nbsp; Arnaud Benoit</th>
+              <td><span>35%</span></td>
+            </tr>
+            <tr style="height:30%">
+              <th scope="row">&nbsp; Sandrine Laperche</th>
+              <td><span>30%</span></td>
+            </tr>
+            
+            <tr style="height:23%">
+              <th scope="row">&nbsp; Sophie Matay</th>
+              <td><span>23%</span></td>
+            </tr>
+            <tr style="height:20%">
+              <th scope="row">&nbsp; Sandra Lebleu</th>
+              <td><span>20%</span></td>
+            </tr>
+            <tr style="height:7%">
+              <th scope="row"> &nbsp; Barbara Soares</th>
+              <td><span>7%</span></td>
+            </tr>
+            <tr style="height:5%">
+              <th scope="row">&nbsp; Quentin Chemin</th>
+              <td><span>5%</span></td>
+            </tr>
+            
+          </tbody>
+        </table>
+  </div>
+  </div>
+
+<style>
+table, input, select, textarea {
+
+}
+
+
+.graph {
+	margin-bottom:100px;
+  font:normal 100%/150% arial,helvetica,sans-serif;
+}
+
+.graph caption {
+	font:bold 150%/120% arial,helvetica,sans-serif;
+	padding-bottom:0.33em;
+}
+
+.graph tbody th {
+	text-align:right;
+}
+
+@supports (display:grid) {
+
+	@media (min-width:32em) {
+
+		.graph {
+      padding:10px;
+			display:block;
+      width:600px;
+      height:300px;
+		}
+
+		.graph caption {
+			display:block;
+		}
+
+		.graph thead {
+			display:none;
+		}
+
+		.graph tbody {
+			position:relative;
+			display:grid;
+			grid-template-columns:repeat(auto-fit, minmax(2em, 1fr));
+			column-gap:2.5%;
+			align-items:end;
+			height:100%;
+			margin:3em 0 1em 2.8em;
+			padding:0 1em;
+			border-bottom:2px solid rgba(0,0,0,0.5);
+			background:repeating-linear-gradient(
+				180deg,
+				rgba(170,170,170,0.7) 0,
+				rgba(170,170,170,0.7) 1px,
+				transparent 1px,
+				transparent 20%
+			);
+		}
+
+		.graph tbody:before,
+		.graph tbody:after {
+			position:absolute;
+			left:-3.2em;
+			width:2.8em;
+			text-align:right;
+			font:bold 80%/120% arial,helvetica,sans-serif;
+		}
+
+		.graph tbody:before {
+			content:"100%";
+			top:-0.6em;
+		}
+
+		.graph tbody:after {
+			content:"0%";
+			bottom:-0.6em;
+		}
+
+		.graph tr {
+			position:relative;
+			display:block;
+		}
+
+		.graph tr:hover {
+			z-index:999;
+		}
+
+		.graph th,
+		.graph td {
+			display:block;
+			text-align:center;
+		}
+
+		.graph tbody th {
+			position:absolute;
+			top:-3em;
+			left:0;
+			width:100%;
+			font-weight:normal;
+			text-align:center;
+      white-space:nowrap;
+			text-indent:0;
+			transform:rotate(-45deg);
+      /* padding-bottom:10px!important; */
+		}
+
+		.graph tbody th:after {
+			content:"";
+		}
+
+		.graph td {
+			width:100%;
+			height:100%;
+			background:#2B3D4F;
+			border-radius:0.5em 0.5em 0 0;
+			transition:background 0.5s;
+		}
+
+		.graph tr:hover td {
+			opacity:0.7;
+		}
+
+		.graph td span {
+			overflow:hidden;
+			position:absolute;
+			left:50%;
+			top:50%;
+			width:0;
+			padding:0.5em 0;
+			margin:-1em 0 0;
+			font:normal 85%/120% arial,helvetica,sans-serif;
+/* 			background:white; */
+/* 			box-shadow:0 0 0.25em rgba(0,0,0,0.6); */
+			font-weight:bold;
+			opacity:0;
+			transition:opacity 0.5s;
+      color:white;
+		}
+
+		.toggleGraph:checked + table td span,
+		.graph tr:hover td span {
+			width:4em;
+			margin-left:-2em; /* 1/2 the declared width */
+			opacity:1;
+		}
+
+
+
+    
+
+
+	} /* min-width:32em */
+
+} /* grid only */
+</style>
+  
+<script>
+  $(function() {
+
+    $(".progress").each(function() {
+
+      var value = $(this).attr('data-value');
+      var left = $(this).find('.progress-left .progress-bar');
+      var right = $(this).find('.progress-right .progress-bar');
+
+      if (value > 0) {
+        if (value <= 50) {
+          right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+        } else {
+          right.css('transform', 'rotate(180deg)')
+          left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+        }
+      }
+
+    })
+
+    function percentageToDegrees(percentage) {
+
+      return percentage / 100 * 360
+
+    }
+
+  });
+</script>
+{% endblock %}

@@ -100,10 +100,11 @@
                 Statistiques
             </a>
         </li>
-        <li>
-            <a href="#">
+        <li class="{% if slug == 'note-de-frais'%}active{% endif %}">
+            <a href="{{ path('note-de-frais') }}">
                 <i class="fas fa-file-invoice-dollar"></i>
                 Note de frais 
+                
             </a>
         </li>
     </ul>
