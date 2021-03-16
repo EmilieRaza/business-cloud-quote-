@@ -1,0 +1,65 @@
+{% extends 'front/layout.html.twig' %}
+
+{% block title %} Fiche client {% endblock %}
+
+{% block content %}
+
+<div class="container mb-4">
+  {# <span class="h3"> Mon compte</span> #}
+    <button type="button" class="btn bg_bouton_principal text-light mb-4  float-right ml-2"> <i class="fas fa-reply"></i> <a href="{{ path('agent_client_liste') }}">Retour</a></button>
+    <button type="file" class="btn bg_bouton_principal text-light mb-4  float-right ml-2"> <a href="#liste_factures_client"> Modifier ma photo de profil</a></button>
+
+    <button type="button" class="btn bg_bouton_principal text-light mb-4  float-right ml-2"> <a href="#liste_factures_client"> Mettre à jours mon compte </a></button>
+
+
+</div>
+<div class="container">
+  <ul id="myTab" class="nav nav-tabs">
+  {# <li class=""><a  class="btn bg_bouton_principal text-light mb-4  float-right ml-2" href="#home" data-toggle="tab">Informations</a></li> #}
+  <li class=""><a  class="btn text-danger mb-4  float-right" href="#profile" data-toggle="tab">Informations confidentielles</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="">
+   <div class="card shadow">
+    <div class="card-body border-0 p-0">
+         <div class="row"> 
+            <div class="col-md-7">
+              <div class="card border-0 ">
+                <ul class="list-group list-group-flush border-0 w-100 ">
+                  {# <li class="list-group-item  border-0 pl-4 pr-4 pt-2 pb-2 ">
+                    <p class="text-center color_bleu1"><b>INFORMATIONS PERSONNELLES</b></p>
+                  </li> #}
+                  <li class="list-group-item bg_container border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Nom</span><span class="float-right">Heren</span></li>
+                  <li class="list-group-item  border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Prenom</span><span class="float-right">Alexia</span></li>
+                  <li class="list-group-item bg_container border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Email</span><span class="float-right">alexiaheren@gmail.com</span></li>
+                  <li class="list-group-item border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Téléphone</span><span class="float-right">01234567890</span></li>
+                  <li class="list-group-item bg_container border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Société</span><span class="float-right">MBS</span></li>
+                  <li class="list-group-item  border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Adresse</span><span class="float-right">10 avenue de l'orme à martin</span></li>
+                  <li class="list-group-item bg_container border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Ville</span><span class="float-right">Evry</span></li>
+                  <li class="list-group-item border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Code postal</span><span class="float-right">91100</span></li>
+                  <li class="list-group-item bg_container border-0 pl-4 pr-4 pt-2 pb-2 "><span class="float-left">Pays</span><span class="float-right">France</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <center> <img src="{{asset('build/images/user1.jpg')}}" class="rounded-circle mt-3 bg-light shadow-lg" alt="logo BCQUOTE" loading="lazy" style="height:300px!important;width:300px!important;"> </center> 
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="tab-pane fade in active mt-5" id="profile">
+        
+        <div class="card shadow">
+        <div class="card-body">
+         
+          <div class="alert alert-danger h-100 w-100" role="alert">
+          (Informations importantes que seul le gérant peut modifier : Adresse de l'entreprise, numéro RCS , numéro TVA etc...)
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
