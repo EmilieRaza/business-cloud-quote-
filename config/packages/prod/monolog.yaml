@@ -15,3 +15,7 @@ monolog:
         symfony_mailer:
             type: service
             id: monolog_mailer_handler
+        nested:
+            type: stream
+            path: "php://stderr"
+            level: debug
