@@ -4,3 +4,4 @@ framework:
         envelope:
             sender: '%app.from_email%'
     secret: '%env(APP_SECRET)%'
+
