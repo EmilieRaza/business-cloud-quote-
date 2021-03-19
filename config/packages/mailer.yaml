@@ -3,3 +3,4 @@ framework:
         dsn: '%env(MAILER_DSN)%'
         envelope:
             sender: '%app.from_email%'
+    secret: '%env(APP_SECRET)%'
