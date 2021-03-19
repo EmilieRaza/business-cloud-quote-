@@ -7,8 +7,6 @@
         "@babel/preset-env": "^7.10.2",
         "@fortawesome/fontawesome-free": "^5.11.2",
         "@fortawesome/free-brands-svg-icons": "^5.11.2",
-        "@symfony/ux-cropperjs": "vendor/symfony/ux-cropperjs/Resources/assets",
-        "@symfony/ux-dropzone": "vendor/symfony/ux-dropzone/Resources/assets",
         "@symfony/webpack-encore": "^1.0.5",
         "bootstrap": "^4.3.1",
         "core-js": "^3.0.0",
